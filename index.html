@@ -1,21 +1,63 @@
 <!DOCTYPE html>
-
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
         <title>leno3s.net</title>
         <link href="./main.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
+        <script>
+            $(function () {
+                var clipboard = new Clipboard('.btn');
+
+                clipboard.on('success', function(e) {
+                    e.clearSelection();
+                });
+            });
+        </script>
+
     </head>
 
     <body>
         <header>
             <h1>leno3s.net</h1>
         </header>
+        <ul class="icons">
+            <li><img src="./img/face_sq.png"></li>
+            <li><img src="./img/spam_can_x05.png"></li>
+            <li><img src="./img/basilisk_time_sq.png"></li>
+        </ul>
+
         <nav>
-            <ul>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="links.html">Links</a></li>
-            </ul>
+            <h2>Links</h2>
+            <table>
+                <tr>
+                    <th>Twitter</th>
+                    <th><a href="https://www.twitter.com/leno3s">@leno3s</a>
+                </tr>
+                <tr>
+                    <th>GitHub</th>
+                    <th><a href="https://github.com/0x306e">0x306e</a>
+                </tr>
+                <tr>
+                    <th>Steam</th>
+                    <th><a href="http://steamcommunity.com/id/leno3s/">leno3s</a>
+                </tr>
+            </table>
+
+            <h2>Donate</h2>
+            <table>
+                <tr>
+                    <th>Amazon.co.jp</th>
+                    <th><a href="http://amzn.asia/0WSObZ9">干し芋のリスト</th>
+                </tr>
+                <tr>
+                    <th>Ethereum</th>
+                    <th><input id="eth" value="0xbbb085f2774c3292Bfd96702154b3087937314Ef" size=40 />
+                        <button class="btn" data-clipboard-target="eth">Click to Copy</button></th>
+                </tr>
+            </table>
         </nav>
+
     </body>
 </html>
