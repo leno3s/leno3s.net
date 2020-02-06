@@ -5,16 +5,6 @@
         <title>leno3s.net</title>
         <link href="./main.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script>
-        <script>
-            $(function () {
-                var clipboard = new Clipboard('.btn');
-
-                clipboard.on('success', function(e) {
-                    e.clearSelection();
-                });
-            });
-        </script>
         <!--  Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123054522-1"></script>
         <script>
@@ -61,11 +51,6 @@
                 <tr>
                     <th>Amazon.co.jp</th>
                     <th><a href="http://amzn.asia/0WSObZ9">干し芋のリスト</th>
-                </tr>
-                <tr>
-                    <th>Ethereum</th>
-                    <th><input id="eth" value="0xbbb085f2774c3292Bfd96702154b3087937314Ef" size=40 />
-                        <button class="btn" data-clipboard-target="eth">Click to Copy</button></th>
                 </tr>
             </table>
         </nav>
